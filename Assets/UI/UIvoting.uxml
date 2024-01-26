@@ -1,7 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1; background-color: rgb(56, 56, 56);">
-        <ui:Button text="FUNNY" parse-escape-sequences="true" display-tooltip-when-elided="true" style="position: absolute; top: 528px; left: 0; width: 113px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; height: 54px;" />
-        <ui:Button text="NOT FUNNY" parse-escape-sequences="true" display-tooltip-when-elided="true" style="position: absolute; top: 522px; left: 966px; width: 113px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; height: 54px;" />
-        <ui:TextField picking-mode="Ignore" label="RATE A MEME" value="filler text" style="position: absolute; top: 1px; left: 435px; width: 236px; color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 30px; align-self: center; align-items: center; justify-content: space-between;" />
-    </ui:VisualElement>
-</ui:UXML>

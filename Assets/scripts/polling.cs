@@ -20,21 +20,21 @@ public class polling: MonoBehaviour
         notfunnyButton = root.Q<Button>("notfunnybutton");
         MessageText = root.Q<Label>("messagetext"); 
         funnyButton.clicked += FunnyButtonPressed;
-        notfunnyButton.clicked+= NotfunnyButtonPressed;
+        //notfunnyButton.clicked+= NotfunnyButtonPressed;
     }
 
      void FunnyButtonPressed()
      {
         
-        SceneManager.LoadScene("game");
+        SceneManager.LoadScene("userselection");
         
     }
-    void NotfunnyButtonPressed()
-     {
+    // void NotfunnyButtonPressed()
+    //  {
         
-        SceneManager.LoadScene("scenename");
+    //     SceneManager.LoadScene("scenename");
         
-    }
+    // }
     
 }
 

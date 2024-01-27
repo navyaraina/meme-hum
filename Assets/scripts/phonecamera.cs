@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-// using UnityEngine.UIElements;
-using UnityEngine.Networking;
-using UnityEngine.SceneManagement;
 using System.IO;
 
 public class CameraController : MonoBehaviour
@@ -14,6 +11,12 @@ public class CameraController : MonoBehaviour
     public Button button;
 
     void Start()
+    {
+        InitializeWebCam();
+        //InitializeUI();
+    }
+
+    void InitializeWebCam()
     {
         // Check if the device has a front camera
         if (WebCamTexture.devices.Length > 0)
@@ -37,9 +40,6 @@ public class CameraController : MonoBehaviour
 
                 // Start the camera feed
                 frontCameraTexture.Play();
-
-                Button btn = button.GetComponent<Button>();
-                btn.onClick.AddListener(OnButtonClick);
             }
             else
             {
@@ -51,32 +51,5 @@ public class CameraController : MonoBehaviour
             Debug.LogError("No cameras found on the device.");
         }
     }
-
-    void Update()
-    {
-        // button.clicked=SavePhoto();
-    }
-
-    void OnButtonClick()
-{
-    StartCoroutine(SavePhotoCoroutine());
 }
 
-IEnumerator SavePhotoCoroutine()
-{
-    yield return new WaitForEndOfFrame();
-
-    int width = Screen.width;
-    int height = Screen.height;
-    Texture2D tex = new Texture2D(width, height, TextureFormat.RGB24, false);
-
-    tex.ReadPixels(new Rect(0, 0, width, height), 0, 0);
-    tex.Apply();
-
-    // Encode texture into PNG
-    byte[] bytes = ImageConversion.EncodeToPNG(tex);
-    Object.Destroy(tex);
-
-    File.WriteAllBytes(Application.dataPath + "/../SavedScreen.png", bytes);
-}
-}

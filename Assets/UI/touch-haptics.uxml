@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(56, 56, 56); -unity-background-image-tint-color: rgb(255, 255, 255);">
+        <ui:Label tabindex="-1" text="all players, put your fingers on the phone" parse-escape-sequences="true" display-tooltip-when-elided="true" name="m_Text" style="flex-grow: 0; flex-direction: column; align-items: stretch; height: 45px; font-size: 15px; color: rgb(255, 255, 255); -unity-text-align: upper-center;" />
+        <ui:VisualElement name="toucharea" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>
